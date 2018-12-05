@@ -1,0 +1,28 @@
+{
+  "name": "splitleaf-codebot",
+  "version": "1.0.0",
+  "description": "Bridge the gap between Slack and GitHub",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/splitleaf/splitleaf-codebot.git"
+  },
+  "keywords": [
+    "slack",
+    "github",
+    "bot"
+  ],
+  "author": "Sean Kennedy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/splitleaf/splitleaf-codebot/issues"
+  },
+  "homepage": "https://github.com/splitleaf/splitleaf-codebot#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4"
+  }
+}
