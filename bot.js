@@ -3,11 +3,15 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/login/github', (req, res) => {
+    if (!process.env.GITHUB_CLIENT_ID) {
+        return res.send('GitHub Client ID Required!');
+    }
+
     res.redirect(
         'https://github.com/login/oauth/authorize?' +
-        `client_id=${process.env.GITHUB_CLIENT_ID}` +
-        `redirect_uri=https://splitleaf-codebot.herokuapp.com/authenticate` +
-        `scope=user%20read:org`
+        `&client_id=${process.env.GITHUB_CLIENT_ID}` +
+        `&redirect_uri=https://splitleaf-codebot.herokuapp.com/authenticate` +
+        `&scope=user%20read:org`
     );
 });
 
